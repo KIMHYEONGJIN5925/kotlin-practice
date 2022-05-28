@@ -57,13 +57,13 @@ fun maxBy2(a : Int, b : Int) :Int = if(a>b) a else b //위의 식과 같다
 
 fun checkNum(score : Int) {
     println("b : ${b}")
-    when(score) {
+    when(score) { // 여기서의 when은 statement다.
         0 -> println("this is 0")
         1 -> println("this is 1")
         2,3 -> println("this is 2 or 3")
         else -> println("i don't know")
     }
-    var b : Int = when(score) {
+    var b : Int = when(score) { // 여기서의 when은 Expression
         1->1
         2->2
         else -> 3
@@ -74,5 +74,39 @@ fun checkNum(score : Int) {
         else -> println("not bad")
     }
 }
+// Expression vs Statement
+//뽀짝뽀작 값을 만드는 것이 Expression
+/*
+* 같은 when, if 도 어떻게 쓰이느냐에 따라 달라진다
+* Kotlin의 모든 함수는 Expression이다.
+*/
+
+
+// 5. Array and List
+
+// List 1.List(수정불가, 읽기전용) 2.MutableList(수정가능)
+
+fun array() {
+    val array = arrayOf(1,2,3) //arrayOf로 array 초기화? 추가? 생성?
+    val list = listOf(1,2,3) //listOf로 list 초기화
+
+    val array2 = arrayOf(1,"d", 3,4f)
+    val list2 = listOf(1,"c",11L)
+
+    array[0] = 3 // array는 수정가능
+
+    //list는 array와는 다르게 interface이다.
+    //가져올수는 있지만, 들어가서 바꾸는 것은 불가능하다다
+    // list[0] = 2 list의 원소수정은 불가
+    var result = list.get(0)
+
+    val arrayList = arrayListOf<Int>() // 변수명을 다시 할당하는 것이 아니면 var, val 둘 다 사용가능
+    arrayList.add(10)
+    arrayList.add(20)
+    /*근데 새로운객체생성해서 재할당하는건안됨
+    arrayList = arrayListOf() 처럼 재할당 x
+    */
+}
+
 
 
