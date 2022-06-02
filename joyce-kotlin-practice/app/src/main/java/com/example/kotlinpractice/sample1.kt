@@ -1,6 +1,8 @@
 package com.example.kotlinpractice
 
 fun main() {
+    forAndWhile()
+
     checkNum(1)
     helloWorld()
 
@@ -56,7 +58,7 @@ fun maxBy(a : Int, b : Int) : Int {
 fun maxBy2(a : Int, b : Int) :Int = if(a>b) a else b //위의 식과 같다
 
 fun checkNum(score : Int) {
-    println("b : ${b}")
+    //println("b : ${b}")
     when(score) { // 여기서의 when은 statement다.
         0 -> println("this is 0")
         1 -> println("this is 1")
@@ -108,5 +110,27 @@ fun array() {
     */
 }
 
+// 6. For / While
+
+fun forAndWhile() {
+    val students = arrayListOf("joyce", "james","jenny", "jennifer")
+    for (name in students){
+        println("${name}")
+    }
+    var sum : Int = 0
+    for (i in 1..10) { // 1..10은 1 until 11 와 같다.
+        sum += i
+    }
+    println(sum)
+
+    for ((index,name) in )
+
+
+    var index = 0
+    while (index < 10) {
+        println ("current index : ${index}")
+        index++
+    }
+}
 
 
