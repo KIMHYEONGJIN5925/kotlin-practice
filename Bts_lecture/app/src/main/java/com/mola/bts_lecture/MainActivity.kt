@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "1번 클릭 완료", Toast.LENGTH_LONG).show()
 
             // 2. 화면이 클릭되면 다음화면으로 넘어가서 사진을 크게 보여준다.
-            val intent1 = Intent(this, Bts1Activity::class.java)
-            startActivity(intent1)
+            val intent = Intent(this, Bts1Activity::class.java)
+            startActivity(intent)
         }
         val image2 = findViewById<ImageView>(R.id.btsImage2)
         image2.setOnClickListener{
