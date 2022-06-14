@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7cb342"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="인생은 주사위"
+            android:textColor="@color/black"
+            android:layout_margin="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:weightSum="2">
+        <ImageView
+            android:id="@+id/dice1"
+            android:src="@drawable/dice_1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/dice2"
+            android:src="@drawable/dice_1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/diceStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff332d"
+        android:textColor="#ffffff"
+        android:text="인생 ㄱㄱ"/>
+</LinearLayout>
+</layout>
